@@ -13,7 +13,7 @@
 ## 🎨 Installation
 
 ```bash
-ya pack -a marcosvnmelo/kanagawa-dragon
+ya pkg add marcosvnmelo/kanagawa-dragon
 ```
 
 ## ⚙️ Usage
