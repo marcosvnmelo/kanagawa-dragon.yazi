@@ -19,22 +19,16 @@
 # surimiOrange  "#e46876"
 # waveAqua2     "#7aa89f"
 
-[manager]
+[mgr]
 marker_copied = { fg = "#8a9a7b", bg = "#8a9a7b" }
 marker_cut = { fg = "#e46876", bg = "#e46876" }
 marker_marked = { fg = "#a292a3", bg = "#a292a3" }
 marker_selected = { fg = "#e46876", bg = "#e46876" }
 
 cwd = { fg = "#e6c384" }
-hovered = { reversed = true }
-preview_hovered = { reversed = true }
 
 find_keyword = { fg = "#e46876", bg = "#181616" }
 find_position = {}
-
-tab_active = { reversed = true }
-tab_inactive = {}
-tab_width = 1
 
 count_copied = { fg = "#181616", bg = "#8a9a7b" }
 count_cut = { fg = "#181616", bg = "#e46876" }
@@ -42,6 +36,19 @@ count_selected = { fg = "#181616", bg = "#e6c384" }
 
 border_symbol = "│"
 border_style = { fg = "#c5c9c5" }
+
+[indicator]
+parent = { reversed = true }
+current = { reversed = true }
+preview = { reversed = true }
+padding = { open = "█", close = "█" }
+
+[tabs]
+active = { fg = "#181616", bg = "#8ba4b0" }
+inactive = { fg = "#8ba4b0", bg = "#0d0c0c" }
+
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
 
 
 [mode]
@@ -126,12 +133,12 @@ rules = [
     { mime = "application/{pdf,doc,rtf,vnd.*}", fg = "#6a9589" },
 
     # broken links
-    { name = "*", is = "orphan", fg = "#c4746e" },
+    { url = "*", is = "orphan", fg = "#c4746e" },
 
     # executables
-    { name = "*", is = "exec", fg = "#76946a" },
+    { url = "*", is = "exec", fg = "#76946a" },
 
     # fallback
-    { name = "*", fg = "#c5c9c5" },
-    { name = "*/", fg = "#8ba4b0" },
+    { url = "*", fg = "#c5c9c5" },
+    { url = "*/", fg = "#8ba4b0" },
 ]
