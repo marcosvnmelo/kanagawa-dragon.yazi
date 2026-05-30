@@ -50,6 +50,18 @@ inactive = { fg = "#8ba4b0", bg = "#0d0c0c" }
 sep_inner = { open = "", close = "" }
 sep_outer = { open = "", close = "" }
 
+[indicator]
+parent = { reversed = true }
+current = { reversed = true }
+preview = { reversed = true }
+
+[tabs]
+active = { fg = "#1f1f28", bg = "#7e9cd8" }
+inactive = { fg = "#7e9cd8", bg = "#2a2a37" }
+
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
 
 [mode]
 normal_main = { fg = "#181616", bg = "#8ba4b0" }
